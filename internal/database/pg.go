@@ -9,6 +9,7 @@ import (
 )
 
 const (
+	// host = "172.17.167.157"
 	host     = "pg-for-go-salt-cost"
 	port     = 5432
 	user     = "salt"
