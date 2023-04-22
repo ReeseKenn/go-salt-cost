@@ -6,9 +6,9 @@ import (
 )
 
 func RunServer() {
-	database.Connect()
-	database.CreateTables()
-	defer database.Close()
+	database.MysqlConnect()
+	database.MysqlCreateTable()
+	defer database.MysqlClose()
 	r := router.New()
 	r.Run(":8080")
 }

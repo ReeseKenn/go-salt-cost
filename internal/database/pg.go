@@ -17,7 +17,7 @@ const (
 	dbname   = "salt_cost_go_dev"
 )
 
-func Connect() {
+func PgConnect() {
 	connStr := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbname)
 	db, err := sql.Open("postgres", connStr)
@@ -32,7 +32,7 @@ func Connect() {
 	log.Println("Successfully connect to db")
 }
 
-func CreateTables() {
+func PgCreateTables() {
 	// 创建 users 表
 	_, err := DB.Exec(`CREATE TABLE IF NOT EXISTS users (
 		id SERIAL PRIMARY KEY,
@@ -46,7 +46,7 @@ func CreateTables() {
 	log.Println("Successfully create users table")
 }
 
-func Close() {
+func PgClose() {
 	DB.Close()
 	log.Println("Successfully close db")
 }
