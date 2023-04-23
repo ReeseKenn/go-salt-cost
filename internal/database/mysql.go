@@ -9,7 +9,8 @@ import (
 )
 
 const (
-	mysqlHost     = "mysql-for-go-salt-cost"
+	// mysqlHost     = "mysql-for-go-salt-cost"
+	mysqlHost     = "172.27.78.26"
 	mysqlPort     = 3306
 	mysqlUser     = "salt"
 	mysqlPassword = "123456"
